@@ -3,6 +3,20 @@ h1 {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    color: #4A699E;
+}
+
+body {
+    background-color: #F1F6FD;
+    font-family: 'Roboto', sans-serif;
+}
+
+button:focus {
+    outline: none;
+}
+
+input:focus {
+    outline: none;
 }
 
 .buttons {
@@ -10,9 +24,66 @@ h1 {
     justify-content: center;
 }
 
+.btn-new-day {
+    border-radius: 7px;
+    margin: 10px;
+    border: solid #4A699E;
+    background-color: #CBD9F0;
+}
+
+.btn-add {
+    border-radius: 7px;
+    margin: 10px;
+    border: solid #4A699E;
+    background-color: #CBD9F0;
+}
+
+.btn-update {
+    border-radius: 7px;
+    margin: 10px;
+    border: solid #4A699E;
+    background-color: #CBD9F0;
+}
+
+.btn-clear {
+    border-radius: 7px;
+    margin: 10px;
+    border: solid #4A699E;
+    background-color: #CBD9F0;
+}
+
+
+.btn-new-day:hover {
+    background-color:#9EB4DB;
+}
+
+.btn-add:hover {
+    background-color:#9EB4DB;
+}
+
+.btn-update:hover {
+    background-color:#9EB4DB;
+}
+
+.btn-clear:hover {
+    background-color:#9EB4DB;
+}
+
 .input-blocks {
     display: flex;
     justify-content: center;
+}
+
+.input-key {
+    margin: 5px 50px 5px 5px;
+    border: solid #9EB4DB;
+    border-radius: 7px;
+}
+
+.input-value {
+    margin: 5px;
+    border: solid #9EB4DB;
+    border-radius: 7px;
 }
 
 .the-date {
@@ -22,9 +93,14 @@ h1 {
     margin: auto;
     font-size: 24px;
     padding: .25%;
+    color: #9EB4DB;
   }
 
   .joy-entry {
       font-size: 14px;
+      color: #4A699E;
   }
 
+  .joy-entries {
+      margin-top: 30px;
+  }

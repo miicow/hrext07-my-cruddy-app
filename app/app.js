@@ -57,10 +57,22 @@ $(document).ready(function(){
     var valueData = $('.input-value').val();
     localStorage.setItem(keyData, valueData);
 
-    $("#" + theDateId()).append('<div class="joy-entry ' + keyData + '" data-keyValue="'+ keyData +'">' + valueData + '</div>');
+    $("#" + theDateId()).append('<div class="joy-entry ' + keyData + '" data-keyValue="'+ keyData +'" id="'+ theDateId() +'">' + valueData + '</div>');
     $('.input-key').val('');
     $('.input-value').val('');
   })
+
+  // $('.btn-add').on('keypress', function(event){
+  //   if(event.which === 13) {
+  //     var keyData = $('.input-key').val();
+  //     var valueData = $('.input-value').val();
+  //     localStorage.setItem(keyData, valueData);
+
+  //     $("#" + theDateId()).append('<div class="joy-entry ' + keyData + '" data-keyValue="'+ keyData +'">' + valueData + '</div>');
+  //     $('.input-key').val('');
+  //     $('.input-value').val('');
+  //   }
+  // })
 
 
   // $('.btn-add').on('click', function(e){
@@ -84,7 +96,6 @@ $(document).ready(function(){
   // update db
     // need to expand when  more than 1 item is added
     $('.btn-update').on('click', function(){
-      alert('hello!')
       var keyData = $('.input-key').val();
       var valueData = $('.input-value').val();
       localStorage[keyData] = valueData;
@@ -94,23 +105,30 @@ $(document).ready(function(){
       $('.input-value').val('');
     })
 
-   // delete item
-  //  $('.container-data').on('click', '.display-data-item', function(e){
+  //  // delete date
+  //  $("#" + theDateId()).on('click', function(){
+  //   // console.log(e.currentTarget.dataset.keyvalue);
+  //   // var keyData = e.currentTarget.dataset.keyvalue;
+  //   // localStorage.removeItem(keyData);
+  //   $("#" + theDateId()).remove().text('');
+  // });
+
+  // $("localStorage[keyData]").on('click', function(e){
   //   console.log(e.currentTarget.dataset.keyvalue);
   //   var keyData = e.currentTarget.dataset.keyvalue;
   //   localStorage.removeItem(keyData);
-  //   $('.container-data').text('');
+  //   $("." + keyData).text('');
   // });
   
   //delete all?
   $('.btn-clear').click(function(){
-    var ans = confirm("Are you sure you want to clear all?");
+    var ans = confirm("Are you sure you want to clear all entries?");
 
     if(ans === true) {
       localStorage.clear();
-      $('.joy-entry').remove().text('');
+      $("#" + theDateId()).remove().text('');
     } else {
-      return "Nevermind!"
+      return alert("Nevermind!")
     }
   });
 
