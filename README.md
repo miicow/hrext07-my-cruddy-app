@@ -19,3 +19,4 @@ Create Read Update and Delete framework using JS
 - [ ] Better way to categorize added HTML elements
 - [ ] Better way to storage entry data
 - [ ] Move away from localStorage?
+- [ ] On Hover Delete
