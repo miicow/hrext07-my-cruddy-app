@@ -6,6 +6,14 @@ h1 {
     color: #4A699E;
 }
 
+h6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #4A699E;
+}
+
 body {
     background-color: #F1F6FD;
     font-family: 'Roboto', sans-serif;
