@@ -20,3 +20,4 @@ Create Read Update and Delete framework using JS
 - [ ] Better way to storage entry data
 - [ ] Move away from localStorage?
 - [ ] On Hover Delete
+- [ ] Display success message
