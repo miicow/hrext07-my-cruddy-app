@@ -51,16 +51,15 @@ $(document).ready(function(){
     $('.joy-entries').append('<div class="the-date" id="'+ theDateId() +'">' + theDate() + '</div>');
   })
 
-  $('.btn-add').keypress(function(event){
-    if(event.which === 13) {
-      var keyData = $('.input-key').val();
-      var valueData = $('.input-value').val();
-      localStorage.setItem(keyData, valueData);
+  $('.btn-add').on('click', function(){
 
-      $("#" + theDateId()).append('<div class="joy-entry ' + keyData + '" data-keyValue="'+ keyData +'">' + valueData + '</div>');
-      $('.input-key').val('');
-      $('.input-value').val('');
-    }
+    var keyData = $('.input-key').val();
+    var valueData = $('.input-value').val();
+    localStorage.setItem(keyData, valueData);
+
+    $("#" + theDateId()).append('<div class="joy-entry ' + keyData + '" data-keyValue="'+ keyData +'">' + valueData + '</div>');
+    $('.input-key').val('');
+    $('.input-value').val('');
   })
 
 
