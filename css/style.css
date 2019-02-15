@@ -8,11 +8,23 @@ h1 {
 .buttons {
     display: flex;
     justify-content: center;
-    margin: 0 auto;
 }
 
 .input-blocks {
     display: flex;
     justify-content: center;
-    margin: 0 auto;
 }
+
+.the-date {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    font-size: 24px;
+    padding: .25%;
+  }
+
+  .joy-entry {
+      font-size: 14px;
+  }
+
